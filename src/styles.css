@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+  background-color: rgba(73, 73, 73, 0.1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  form {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bhImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+.container {
+  margin-top: 150px;
+}
+
+.js-title {
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  text-shadow: 1px 3px 10px gray;
+}
+
+.form,
+.greetings {
+  display: none;
+}
+.js-greetings {
+  color: white;
+  font-style: italic;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+input[type="text"]::placeholder {
+  color: white;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.showing {
+  display: block;
+}
+li {
+  list-style: none;
+  color: white;
+  font-size: 24px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.weather {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.location {
+  color: white;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}

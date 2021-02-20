@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Momontom</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="js-clock">
+          <h1 class="js-title">00:00</h1>
+        </div>
+
+        <form class="js-form form">
+          <input
+            type="text"
+            placeholder="What is your name?"
+            class="your-name"
+          />
+        </form>
+
+        <h1 class="js-greetings greetings"></h1>
+
+        <form class="js-toDoForm">
+          <input type="text" placeholder="Write a to do" class="todo" />
+        </form>
+
+        <ul class="js-toDoList"></ul>
+
+        <div class="weather">
+          <div>
+            <span class="location"></span>
+          </div>
+          <div class="weather-info">
+            <img src="" /> <span class="temperature"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/ed92b8d94d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/clock.js"></script>
+    <script src="./src/greeting.js"></script>
+    <script src="./src/todo.js"></script>
+    <script src="./src/background.js"></script>
+    <script src="./src/weather.js"></script>
+  </body>
+</html>
