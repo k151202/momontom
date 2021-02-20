@@ -13,15 +13,16 @@ function getWeather(lat, lon) {
       return response.json();
     })
     .then(function (json) {
-      const temperature = json.main.temp;
+      let temperature = json.main.temp;
       const place = json.name;
       const country = json.sys.country;
       const icon = json.weather[0].icon;
       const description = json.weather[0].description;
-      console.log(weatherLocation);
+      temperature = parseFloat(temperature);
+      temperature = Math.round(temperature).toFixed(1);
       weatherLocation.innerText = `${place}, ${country}`;
       weatherIcon.src = `http://openweathermap.org/img/wn/${icon}.png`;
-      weatherTemperature.innerText = `${temperature}°C`;
+      weatherTemperature.innerText = `${temperature}°C, ${description}`;
     });
 }
 
@@ -39,8 +40,10 @@ function handleGeoSuccess(position) {
   saveCoords(coordsObjd);
   getWeather(latitude, longitude);
 }
-function handleGeoError() {
+
+function handleGeoError(error) {
   console.log("Cannot access your location");
+  console.log(error.message);
 }
 
 function askForCoords() {

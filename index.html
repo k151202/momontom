@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
   <head>
     <meta charset="UTF-8" />
     <title>Momontom</title>
@@ -10,6 +10,10 @@
       <div class="container">
         <div class="js-clock">
           <h1 class="js-title">00:00</h1>
+        </div>
+
+        <div class="date">
+          <h2 class="js-date"></h2>
         </div>
 
         <form class="js-form form">
@@ -23,7 +27,7 @@
         <h1 class="js-greetings greetings"></h1>
 
         <form class="js-toDoForm">
-          <input type="text" placeholder="Write a to do" class="todo" />
+          <input type="text" placeholder="Write your todo!" class="todo" />
         </form>
 
         <ul class="js-toDoList"></ul>
@@ -42,6 +46,7 @@
       src="https://kit.fontawesome.com/ed92b8d94d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./src/date.js"></script>
     <script src="./src/clock.js"></script>
     <script src="./src/greeting.js"></script>
     <script src="./src/todo.js"></script>
